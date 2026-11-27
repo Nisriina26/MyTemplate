@@ -133,39 +133,6 @@
 \makeatother
 
 
-% definitions for citeproc citations
-\NewDocumentCommand\citeproctext{}{}
-\NewDocumentCommand\citeproc{mm}{%
-  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
-\makeatletter
- % allow citations to break across lines
- \let\@cite@ofmt\@firstofone
- % avoid brackets around text for \cite:
- \def\@biblabel#1{}
- \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
-\makeatother
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
- {\begin{list}{}{%
-  \setlength{\itemindent}{0pt}
-  \setlength{\leftmargin}{0pt}
-  \setlength{\parsep}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-   \setlength{\leftmargin}{\cslhangindent}
-   \setlength{\itemindent}{-1\cslhangindent}
-  \fi
-  % set entry spacing
-  \setlength{\itemsep}{#2\baselineskip}}}
- {\end{list}}
-\usepackage{calc}
-\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \ifLuaTeX
 \usepackage[bidi=basic,shorthands=off,provide=*]{babel}
@@ -298,52 +265,42 @@
 
 \markboth{Kata Pengantar}{Kata Pengantar}
 
-Dengan mengucap syukur kepada Tuhan Yang Maha Esa, saya sangat senang
-dapat mempersembahkan eBook \textbf{``Quarto Template''} kepada para
-pembaca dan pengguna. eBook ini disusun sebagai panduan praktis untuk
-membantu mahasiswa, dosen, peneliti, serta praktisi dalam memanfaatkan
-Quarto sebagai salah satu perangkat untuk menyusun, mengelola, dan
-menerbitkan dokumen secara profesional.
+Dengan mengucap syukur kepada Tuhan Yang Maha Esa, saya merasa senang
+dapat menyelesaikan eBook ``Buku Statistika'' ini. eBook ini disusun
+sebagai salah satu bentuk media pembelajaran yang bertujuan untuk
+membantu mahasiswa dan pembaca dalam memahami konsep dasar statistika.
+Materi di dalam buku ini diharapkan dapat menjadi sumber belajar yang
+bermanfaat, khususnya bagi pembaca yang sedang mempelajari bidang
+statistika dan Sains Data.
 
-Quarto merupakan perangkat \emph{open-source scientific and technical
-publishing} yang memungkinkan pengguna mengintegrasikan teks, kode
-pemrograman, hasil analisis, visualisasi data, serta berbagai elemen
-pendukung lainnya ke dalam satu dokumen. Dengan Quarto, proses penulisan
-dan publikasi dapat dilakukan secara lebih terstruktur, reproducible,
-dan efisien dalam berbagai format keluaran, seperti HTML, PDF, Microsoft
-Word, serta format publikasi lainnya.
+Statistika merupakan salah satu ilmu yang memiliki peran penting dalam
+proses pengumpulan, pengolahan, penyajian, analisis, hingga penarikan
+kesimpulan berdasarkan data. Dalam berbagai bidang, statistika digunakan
+untuk membantu memahami suatu permasalahan, menemukan pola, serta
+mendukung pengambilan keputusan secara lebih tepat. Oleh karena itu,
+pemahaman mengenai konsep dan metode statistika menjadi dasar yang
+penting, terutama di tengah perkembangan teknologi dan kebutuhan
+terhadap pemanfaatan data.
 
-Contoh sitasi: tuliskan \texttt{{[}@xie2015{]}} untuk merujuk entri
-\texttt{xie2015} di \texttt{references/book.bib}. Pada hasil render,
-sitasinya tampil seperti ini \citeproc{ref-xie2015}{{[}1{]}}.
-
-Melalui eBook ini, pembaca akan diperkenalkan pada penggunaan template
-Quarto, mulai dari pengenalan struktur proyek, pengaturan konfigurasi,
-penulisan dokumen menggunakan Markdown, integrasi kode pemrograman,
-pengelolaan referensi, hingga proses \emph{rendering} menjadi dokumen
-yang siap digunakan dan dipublikasikan.
-
-Materi disusun secara bertahap agar mudah dipahami dan dipraktikkan,
-termasuk oleh pengguna yang baru pertama kali mengenal Quarto. Template
-dan contoh yang disajikan diharapkan dapat menjadi referensi dalam
-mengembangkan berbagai kebutuhan dokumentasi akademik, laporan
-penelitian, modul pembelajaran, buku elektronik, maupun publikasi
+Sebagai mahasiswa Program Studi Sains Data di Institut Teknologi Sains
+Bandung, saya menyadari bahwa pemahaman statistika merupakan salah satu
+dasar penting dalam mengembangkan kemampuan analisis data. Melalui eBook
+ini, saya berharap dapat menyusun materi pembelajaran yang tidak hanya
+berisi teori, tetapi juga dapat memberikan gambaran mengenai manfaat
+statistika dalam mendukung proses pengolahan dan pengambilan keputusan
 berbasis data.
 
-Saya berharap eBook ini dapat memberikan manfaat nyata dalam mendukung
-peningkatan literasi digital, produktivitas akademik, dan penerapan
-praktik penulisan ilmiah yang modern. Lebih dari sekadar panduan teknis,
-eBook ini diharapkan dapat mendorong pembaca untuk mengeksplorasi
-berbagai kemampuan Quarto dan mengembangkan template sesuai dengan
-kebutuhan masing-masing.
+Saya menyadari bahwa eBook ini masih memiliki kekurangan, baik dari segi
+penyusunan materi maupun penyampaian penjelasan. Oleh karena itu, kritik
+dan saran yang membangun dari para pembaca sangat diharapkan sebagai
+bahan evaluasi untuk memperbaiki dan mengembangkan eBook ini menjadi
+lebih baik ke depannya.
 
-Saya menyadari bahwa eBook ini masih memiliki ruang untuk penyempurnaan.
-Oleh karena itu, kritik, saran, dan masukan dari para pembaca sangat
-diharapkan sebagai bahan evaluasi untuk pengembangan edisi berikutnya.
-
-Akhir kata, semoga eBook ini dapat menjadi referensi yang bermanfaat dan
-memberikan kontribusi positif bagi dunia pendidikan, penelitian, dan
-pengembangan ilmu pengetahuan.
+Akhir kata, saya berharap eBook ``Buku Statistika'' ini dapat memberikan
+manfaat bagi mahasiswa, pelajar, maupun pembaca umum yang ingin
+mempelajari statistika. Semoga buku ini dapat menjadi salah satu sumber
+referensi pembelajaran yang membantu meningkatkan pemahaman dan
+kemampuan dalam mengolah, menganalisis, serta menginterpretasikan data.
 
 \textbf{Nisriina Selo Destyanti}\\
 Penulis
@@ -389,38 +346,47 @@ bermanfaat dan mendukung pengambilan keputusan.
 
 \markright{Ucapan Terima Kasih}
 
-Proses penulisan Tempate eBook ini tidak terlepas dari dukungan berbagai
-pihak. Saya ingin mengucapkan terima kasih kepada:
+Proses penyusunan eBook ``Buku Statistika'' ini tidak terlepas dari
+bantuan, dukungan, dan bimbingan dari berbagai pihak. Oleh karena itu,
+saya ingin menyampaikan ucapan terima kasih kepada:
 
 \begin{itemize}
-\tightlist
 \item
-  \textbf{Keluarga} yang selalu memberikan dukungan moral dan semangat
-  tanpa henti.
+  \textbf{Tuhan Yang Maha Esa}, atas rahmat dan karunia-Nya sehingga
+  proses penyusunan eBook ini dapat berjalan dengan baik.
 \item
-  \textbf{Rekan-rekan dan Kolaborator} yang telah memberikan masukan,
-  saran, dan kritik yang konstruktif.
+  \textbf{Keluarga}, yang selalu memberikan doa, dukungan, semangat, dan
+  motivasi selama proses penyusunan eBook ini.
 \item
-  Institusi dan Organisasi, Khususnya
-  \textbf{\href{https://itsb.ac.id/}{ITSB}} yang telah menyediakan
-  sumber daya dan fasilitas yang diperlukan selama proses penelitian dan
-  penulisan.
+  \textbf{Dosen dan Tenaga Pengajar}, khususnya di Program Studi Sains
+  Data Institut Teknologi Sains Bandung, yang telah memberikan ilmu,
+  bimbingan, serta pengetahuan mengenai konsep dan penerapan statistika.
+\item
+  \textbf{Rekan-rekan Mahasiswa}, yang telah memberikan dukungan,
+  bertukar pikiran, serta membantu melalui berbagai masukan dan saran
+  selama proses pembelajaran dan penyusunan materi.
+\item
+  \textbf{Seluruh pihak yang telah membantu}, baik secara langsung
+  maupun tidak langsung, sehingga eBook ini dapat diselesaikan.
 \end{itemize}
 
-Saya berharap Template eBook ini dapat menjadi referensi yang bermanfaat
-dan memberikan inspirasi serta pengetahuan baru bagi pembaca. Semoga
-Ebook ini dapat memenuhi ekspektasi dan kebutuhan para pembaca dan
-semoga ilmu yang disampaikan dapat bermanfaat bagi semua.
+Saya berharap eBook ini dapat menjadi sumber pembelajaran yang
+bermanfaat bagi para pembaca, khususnya dalam memahami konsep dasar
+statistika dan penerapannya dalam analisis data. Semoga materi yang
+disajikan dapat menambah wawasan, mempermudah proses belajar, serta
+memberikan manfaat bagi siapa pun yang mempelajarinya.
 
 \section*{Masukan \& Saran}\label{masukan-saran}
 \addcontentsline{toc}{section}{Masukan \& Saran}
 
 \markright{Masukan \& Saran}
 
-Semua masukan dan tanggapan Anda sangat berarti bagi kami untuk
-memperbaiki Ebook Quarto Template ini kedepannya. Bagi para
-pembaca/pengguna yang ingin menyampaikan masukan dan tanggapan,
-dipersilahkan melalui kontak dibawah ini!
+Saya menyadari bahwa eBook ``Buku Statistika'' ini masih memiliki
+kekurangan, baik dari segi materi, penyampaian, maupun penyusunannya.
+Oleh karena itu, segala bentuk kritik, masukan, dan saran dari para
+pembaca sangat diharapkan sebagai bahan evaluasi untuk meningkatkan
+kualitas eBook ini. Bagi para pembaca yang ingin menyampaikan masukan
+dan tanggapan, dipersilahkan melalui kontak dibawah ini!
 
 \textbf{Email:} nisriinaninis8@gmail.com
 
@@ -661,15 +627,11 @@ SD distribusi sampling (SE) & 0.5615 & 0.5556 \\
 
 Hasil simulasi hampir persis sama dengan teori.
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Catatan}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
-
 \textbf{Koreksi populasi terhingga.} Rumus \(\sigma/\sqrt{n}\)
 mengasumsikan populasi sangat besar dibanding sampel. Jika sampel
 mencapai lebih dari sekitar 5\% populasi (tanpa pengembalian), SE
 dikalikan faktor \(\sqrt{\frac{N-n}{N-1}}\). Pada contoh ini
 \(n/N = 0{,}2\%\), sehingga koreksi dapat diabaikan.
-
-\end{tcolorbox}
 
 \subsection{Pengaruh Ukuran Sampel}\label{pengaruh-ukuran-sampel}
 
@@ -706,16 +668,12 @@ meskipun populasinya menjulur kanan.
 
 \section{Central Limit Theorem (CLT)}\label{central-limit-theorem-clt}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
-
 \textbf{Central Limit Theorem.} Jika sampel acak berukuran \(n\) diambil
 dari populasi \textbf{sembarang bentuk} dengan mean \(\mu\) dan
 simpangan baku \(\sigma\) (terhingga), maka untuk \(n\) yang cukup
 besar, distribusi sampling \(\bar{x}\) mendekati normal:
 
 \[\bar{x} \approx N\!\left(\mu,\ \frac{\sigma}{\sqrt{n}}\right)\]
-
-\end{tcolorbox}
 
 CLT adalah alasan mengapa distribusi normal muncul di mana-mana dalam
 statistika inferensial -- bukan karena data selalu normal, tetapi karena
@@ -1370,14 +1328,10 @@ sekitar 1.000--1.100 responden, berapa pun ukuran populasinya (asalkan
 populasi jauh lebih besar dari sampel). Memperkecil \emph{margin of
 error} dari 2\% ke 1\% memerlukan sampel \textbf{empat kali lipat}.
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Penting}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
-
 \textbf{Ukuran sampel tidak menyembuhkan bias.} Rumus di atas hanya
 mengendalikan galat \emph{acak}. Jika metode sampling bias (Pertemuan
 3), sampel sebesar apa pun tetap menghasilkan selang yang presisi di
 tempat yang salah.
-
-\end{tcolorbox}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -2139,14 +2093,10 @@ Diterima hanya jika bukti kuat \\
 \end{longtable}
 }
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Penting}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
-
 \textbf{Aturan penting:} hipotesis selalu dinyatakan tentang
 \textbf{parameter populasi} (\(\mu\), \(p\), \(\sigma\)), \textbf{bukan}
 statistik sampel. Menulis ``\(H_0: \bar{x} = 250\)'' adalah keliru,
 karena \(\bar{x}\) sudah kita ketahui.
-
-\end{tcolorbox}
 
 \subsection{Tiga Bentuk Hipotesis}\label{tiga-bentuk-hipotesis}
 
@@ -2199,13 +2149,9 @@ kurang dari, menurun, lebih rendah, lebih cepat (waktu) & \(<\) \\
 \end{longtable}
 }
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Peringatan}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
-
 \textbf{Tentukan arah sebelum melihat data.} Memilih uji satu arah
 setelah melihat arah selisih pada data adalah kecurangan: \emph{p-value}
 menjadi separuhnya secara tidak sah. Jika ragu, gunakan uji dua arah.
-
-\end{tcolorbox}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -2390,14 +2336,10 @@ buktinya, bukan sekadar lolos atau tidak.
 \end{longtable}
 }
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Penting}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
-
 \textbf{``Gagal menolak \(H_0\)'' tidak sama dengan ``\(H_0\) benar''.}
 Sama seperti ``tidak terbukti bersalah'' tidak berarti ``terbukti tidak
 bersalah''. Bisa jadi efeknya memang ada tetapi sampel kita terlalu
 kecil untuk mendeteksinya.
-
-\end{tcolorbox}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -3439,15 +3381,11 @@ Koreksi Bonferroni & Memakai \(\alpha/k\) untuk setiap dari \(k\) uji \\
   laporkan besar efek dan selang kepercayaan, dan waspadai uji berganda.
 \end{enumerate}
 
-\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Catatan}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
-
 \textbf{Jembatan ke sesi berikutnya:} hari ini kita memakai uji z dengan
 \(\sigma\) diketahui sebagai kendaraan untuk memahami konsep. Pertemuan
 11 membahas situasi yang jauh lebih sering dijumpai -- \(\sigma\) tidak
 diketahui -- dengan uji t satu sampel, dua sampel independen, dan
 berpasangan, beserta uji z dua sampel.
-
-\end{tcolorbox}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -3490,14 +3428,6 @@ pemahaman dengan merujuk pada:
 \markboth{Referensi}{Referensi}
 
 \protect\phantomsection\label{refs}
-\begin{CSLReferences}{0}{0}
-\bibitem[\citeproctext]{ref-xie2015}
-\CSLLeftMargin{{[}1{]} }%
-\CSLRightInline{Y. Xie, \emph{\href{http://yihui.name/knitr/}{Dynamic
-Documents with {R} and knitr}}, 2nd ed. Boca Raton, Florida: Chapman;
-Hall/CRC, 2015.}
-
-\end{CSLReferences}
 
 
 \backmatter

@@ -157,9 +157,8 @@ knitr::kable(data.frame(
 
 Hasil simulasi hampir persis sama dengan teori.
 
-::: {.callout-note}
 **Koreksi populasi terhingga.** Rumus $\sigma/\sqrt{n}$ mengasumsikan populasi sangat besar dibanding sampel. Jika sampel mencapai lebih dari sekitar 5% populasi (tanpa pengembalian), SE dikalikan faktor $\sqrt{\frac{N-n}{N-1}}$. Pada contoh ini $n/N = 0{,}2\%$, sehingga koreksi dapat diabaikan.
-:::
+
 
 ### Pengaruh Ukuran Sampel
 
@@ -187,11 +186,10 @@ Kurva merah adalah distribusi normal dengan mean $\mu$ dan SD $\sigma/\sqrt{n}$.
 
 ## Central Limit Theorem (CLT)
 
-::: {.callout-tip}
 **Central Limit Theorem.** Jika sampel acak berukuran $n$ diambil dari populasi **sembarang bentuk** dengan mean $\mu$ dan simpangan baku $\sigma$ (terhingga), maka untuk $n$ yang cukup besar, distribusi sampling $\bar{x}$ mendekati normal:
 
 $$\bar{x} \approx N\!\left(\mu,\ \frac{\sigma}{\sqrt{n}}\right)$$
-:::
+
 
 CLT adalah alasan mengapa distribusi normal muncul di mana-mana dalam statistika inferensial – bukan karena data selalu normal, tetapi karena **rata-rata** dari data cenderung normal.
 
@@ -537,9 +535,7 @@ knitr::kable(data.frame(MoE = c("5%", "3%", "2%", "1%"),
 
 Survei nasional dengan *margin of error* sekitar ± 3% memerlukan sekitar 1.000–1.100 responden, berapa pun ukuran populasinya (asalkan populasi jauh lebih besar dari sampel). Memperkecil *margin of error* dari 2% ke 1% memerlukan sampel **empat kali lipat**.
 
-::: {.callout-important}
 **Ukuran sampel tidak menyembuhkan bias.** Rumus di atas hanya mengendalikan galat *acak*. Jika metode sampling bias (Pertemuan 3), sampel sebesar apa pun tetap menghasilkan selang yang presisi di tempat yang salah.
-:::
 
 ---
 

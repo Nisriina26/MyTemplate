@@ -140,9 +140,8 @@ Jika mesin benar, rata-rata yang meleset **2,4 gram atau lebih** (ke arah mana p
 | **Tanda** | Selalu memuat **kesamaan**: $=$, $\leq$, atau $\geq$ | $\neq$, $>$, atau $<$ |
 | **Posisi dalam uji** | Diasumsikan benar selama perhitungan | Diterima hanya jika bukti kuat |
 
-::: {.callout-important}
 **Aturan penting:** hipotesis selalu dinyatakan tentang **parameter populasi** ($\mu$, $p$, $\sigma$), **bukan** statistik sampel. Menulis "$H_0: \bar{x} = 250$" adalah keliru, karena $\bar{x}$ sudah kita ketahui.
-:::
+
 
 ### Tiga Bentuk Hipotesis
 
@@ -160,9 +159,8 @@ Jika mesin benar, rata-rata yang meleset **2,4 gram atau lebih** (ke arah mana p
 | lebih dari, meningkat, melebihi, lebih baik | $>$ |
 | kurang dari, menurun, lebih rendah, lebih cepat (waktu) | $<$ |
 
-::: {.callout-warning}
 **Tentukan arah sebelum melihat data.** Memilih uji satu arah setelah melihat arah selisih pada data adalah kecurangan: *p-value* menjadi separuhnya secara tidak sah. Jika ragu, gunakan uji dua arah.
-:::
+
 
 ---
 
@@ -270,9 +268,9 @@ Kedua pendekatan **selalu** memberi keputusan yang sama. Pendekatan *p-value* le
 | $0{,}01$–$0{,}05$ | Cukup kuat |
 | $< 0{,}01$ | Sangat kuat |
 
-::: {.callout-important}
+
 **"Gagal menolak $H_0$" tidak sama dengan "$H_0$ benar".** Sama seperti "tidak terbukti bersalah" tidak berarti "terbukti tidak bersalah". Bisa jadi efeknya memang ada tetapi sampel kita terlalu kecil untuk mendeteksinya.
-:::
+
 
 ---
 
@@ -753,9 +751,9 @@ Kerjakan soal-soal berikut secara mandiri sebelum melihat kunci jawaban pada kom
 5. Kesalahan Tipe I ($\alpha$) dan Tipe II ($\beta$) saling tarik-menarik; hanya sampel lebih besar yang dapat mengurangi keduanya sekaligus. Rancang studi dengan power memadai.
 6. Signifikan secara statistik belum tentu penting secara praktis; laporkan besar efek dan selang kepercayaan, dan waspadai uji berganda.
 
-::: {.callout-note}
+
 **Jembatan ke sesi berikutnya:** hari ini kita memakai uji z dengan $\sigma$ diketahui sebagai kendaraan untuk memahami konsep. Pertemuan 11 membahas situasi yang jauh lebih sering dijumpai – $\sigma$ tidak diketahui – dengan uji t satu sampel, dua sampel independen, dan berpasangan, beserta uji z dua sampel.
-:::
+
 
 ---
 
