@@ -3,13 +3,13 @@ project:
   output-dir: docs
   resources:
     - .nojekyll
-    - images/author/Bakti.png
+    - images/author/PS 3x4.jpg
     - epub-reader.html
     - assets/epub-reader.js
 
 book:
-  title: "Quarto Template"
-  author: "Bakti Siregar, M.Sc."
+  title: "Buku Statistika"
+  author: "Nisriina Selo Destyanti"
   date: today
   description: "Deskripsi singkat tentang buku"
   cover-image: images/Cover.png
@@ -52,7 +52,7 @@ format:
     include-after-body: assets/hover-preview.html
     include-in-header:
       text: |
-        <meta name="author" content="Bakti Siregar, M.Sc.">
+        <meta name="author" content="Nisriina Selo Destyanti">
   pdf:
     documentclass: book
     pdf-engine: xelatex
